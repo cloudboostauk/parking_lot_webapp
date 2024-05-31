@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Lot Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Parking Lot Management System</h1>
+    </header>
+    <div class="container">
+        <section class="summary">
+            <h2>Summary and Instructions</h2>
+            <p>Welcome to the Parking Lot Management System! Here’s how you can use this website:</p>
+            <ol>
+                <li>Select your vehicle type (small or large).</li>
+                <li>Choose an available slot from the dropdown menu.</li>
+                <li>Click the "Book Slot" button to book the selected slot.</li>
+                <li>To exit and calculate charges:
+                    <ul>
+                        <li>Enter the slot number.</li>
+                        <li>Enter the entry time.</li>
+                        <li>Enter the exit time.</li>
+                        <li>Click the "Calculate Charges" button.</li>
+                    </ul>
+                </li>
+                <li>The total charges will be displayed, and the slot will be marked as available again.</li>
+            </ol>
+            <h3>Parking Charges</h3>
+            <ul>
+                <li>Small vehicle slots: $60 for up to 30 minutes, plus $15 for each additional hour.</li>
+                <li>Large vehicle slots: $100 for up to 30 minutes, plus $15 for each additional hour.</li>
+            </ul>
+        </section>
+        <section class="parking-lot">
+            <!-- Small Vehicle Slots -->
+            <div class="slot small" id="slot1">Slot 1 (Small)</div>
+            <div class="slot small" id="slot2">Slot 2 (Small)</div>
+            <div class="slot small" id="slot3">Slot 3 (Small)</div>
+            <div class="slot small" id="slot4">Slot 4 (Small)</div>
+            <div class="slot small" id="slot5">Slot 5 (Small)</div>
+            <div class="slot small" id="slot6">Slot 6 (Small)</div>
+            <div class="slot small" id="slot7">Slot 7 (Small)</div>
+            <div class="slot small" id="slot8">Slot 8 (Small)</div>
+            <div class="slot small" id="slot9">Slot 9 (Small)</div>
+            <div class="slot small" id="slot10">Slot 10 (Small)</div>
+            <!-- Large Vehicle Slots -->
+            <div class="slot large" id="slot11">Slot 11 (Large)</div>
+            <div class="slot large" id="slot12">Slot 12 (Large)</div>
+            <div class="slot large" id="slot13">Slot 13 (Large)</div>
+            <div class="slot large" id="slot14">Slot 14 (Large)</div>
+            <div class="slot large" id="slot15">Slot 15 (Large)</div>
+        </section>
+        <section class="booking-form">
+            <h2>Book a Parking Slot</h2>
+            <form id="bookingForm">
+                <label for="vehicleType">Vehicle Type:</label>
+                <select id="vehicleType" name="vehicleType" required>
+                    <option value="" disabled selected>Select your vehicle type</option>
+                    <option value="small">Small Vehicle</option>
+                    <option value="large">Large Vehicle</option>
+                </select>
+                <label for="slotNumber">Select Slot:</label>
+                <select id="slotNumber" name="slotNumber" required>
+                    <option value="" disabled selected>Select a slot</option>
+                    <!-- Slots will be populated dynamically using JavaScript -->
+                </select>
+                <button type="submit">Book Slot</button>
+            </form>
+        </section>
+        <section class="charges-display">
+            <h2>Exit and Calculate Charges</h2>
+            <form id="exitForm">
+                <label for="exitSlotNumber">Slot Number:</label>
+                <input type="text" id="exitSlotNumber" name="exitSlotNumber" required placeholder="Enter slot number (e.g., slot1)">
+                <label for="entryTime">Entry Time:</label>
+                <input type="datetime-local" id="entryTime" name="entryTime" required>
+                <label for="exitTime">Exit Time:</label>
+                <input type="datetime-local" id="exitTime" name="exitTime" required>
+                <button type="submit">Calculate Charges</button>
+            </form>
+            <div id="chargeResult" class="charge-result"></div>
+        </section>
+        <section class="dashboard">
+            <h2>Total Money Collected</h2>
+            <div id="totalAmount" class="total-amount">$0.00</div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
