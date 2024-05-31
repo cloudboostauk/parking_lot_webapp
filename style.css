@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.summary {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.parking-lot {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.slot {
+    border: 2px solid #4CAF50;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.slot.small {
+    background-color: #e7f9e7;
+}
+
+.slot.large {
+    background-color: #e7e7f9;
+}
+
+.slot.booked {
+    background-color: #f9e7e7;
+    border-color: #f44336;
+}
+
+.booking-form, .charges-display, .dashboard {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.booking-form h2, .charges-display h2, .dashboard h2, .summary h2 {
+    margin-top: 0;
+}
+
+.booking-form label, .charges-display label, .dashboard label, .summary label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.booking-form select, .booking-form input, .charges-display input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.booking-form button, .charges-display button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.charge-result {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+.total-amount {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4CAF50;
+}
